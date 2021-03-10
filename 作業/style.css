@@ -12,11 +12,51 @@ body{
 .div_border1{
      border-style: solid;
      /* border: darkgrey; */
-     
      border-color: red;
      /* border-width: 3.5px; */
      border-width: 10%; 
      border-radius: 10px 10px 10px 10px;
      padding: 10px;
 }
+.left1{
+     position: relative;
+     float: left;
+     height: 50%;
+     width: 30%;
+     background-color: yellowgreen;
+     padding: 10px;
+     margin: auto;
+}
 
+.right1{
+     position: relative;
+     float: right;
+     /* height: 50%; */
+     width: 70%;
+     background-color: goldenrod;
+     padding: 10px;
+     margin: auto;
+}
+
+
+
+
+.left2{
+     position: relative;
+     float: left;
+     height: 50%;
+     width: 50%;
+     background-color: yellowgreen;
+     padding: 10px;
+
+}
+
+.right2{
+     position: relative;
+     float: right;
+     height: 50%;
+     width: 50%;
+     background-color: goldenrod;
+     padding: 5px;
+
+}
