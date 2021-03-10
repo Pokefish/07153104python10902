@@ -1,2 +1,22 @@
 
 /* 標題 */
+
+body{
+     background:#56a77e;
+     color:#c6cdd7;
+     font-family: monospace,'黑體', sans-serif;
+}
+
+/* 區邊框 */
+
+.div_border1{
+     border-style: solid;
+     /* border: darkgrey; */
+     
+     border-color: red;
+     /* border-width: 3.5px; */
+     border-width: 10%; 
+     border-radius: 10px 10px 10px 10px;
+     padding: 10px;
+}
+
