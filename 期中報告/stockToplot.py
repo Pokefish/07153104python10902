@@ -33,19 +33,20 @@ for a in range(len(stockNo)) :
           # print(url)
           print(date[d],stockNo[a])
           try :
-          res=requests.get(url)
-          print(res)
+               res=requests.get(url)
+               print(res)
           except Exception :
-          if d >= len(date)-1 :
-               do_some_log(e)
-               print(e)
+               if d >= len(date)-1 :
+                    # do_some_log()
+                    # print(e)
+                    pass
           else :
                time.sleep(1)
                print("time.sleep 1 sec")
-          pass
+               pass
      else :
-     time.sleep(0.5)
-     print("time.sleep 0.5 sec")
+          time.sleep(0.5)
+          print("time.sleep 0.5 sec")
      
      # print(a)
      s=json.loads(res.text,encoding='utf8') 
@@ -53,9 +54,9 @@ for a in range(len(stockNo)) :
 
      #日期跟收盤價的dataframe 
      for i in range(len(closing_price_values[4])):
-     closing_price_price.append(float(closing_price_values[4][i][6]))
-     closing_price_date.append(closing_price_values[4][i][0])
-     i +=1 
+          closing_price_price.append(float(closing_price_values[4][i][6]))
+          closing_price_date.append(closing_price_values[4][i][0])
+          i +=1 
      # print(closing_price_price)
      # print(closing_price_date)
      #公司名
@@ -65,13 +66,12 @@ for a in range(len(stockNo)) :
      df = pd.DataFrame(data = closing_price_price,index = closing_price_date, columns= [title])
 # 做圖      
 #取當天到前30天 
-df[-30:].plot(figsize = (12, 5),
+     df[-30:].plot(figsize = (12, 5),
           fontsize = 15,
           title = title  + "\t趨勢圖",
           linewidth = 2.0) 
-plt.title(title + "\t趨勢圖" ,fontproperties=font_path)
-plt.legend(prop=font_path)
-
-a += 1
+     plt.title(title + "\t趨勢圖" ,fontproperties=font_path)
+     plt.legend(prop=font_path)
+     a += 1
 
 plt.show()
